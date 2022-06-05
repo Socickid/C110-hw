@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Facial Expressions to Emojis</title>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+        <script src="//unpkg.com/ml5@0.4.3/dist/ml5.min.js" target="_blank"></script>
+    </head>
+
+
+    <body>
+        <center>
+            <h3 class = "btn btn-warning">Hand Gestures to Emojis
+                <br> 👌 👍 ✌️ 🖐️ 👎 👊
+            </h3>
+            <h5>Take your selfie to generate your Emojis</h5>
+            <br>
+            <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                <label class = "btn btn-primary">Webcam View</label>
+                <br>
+                <div id = "WebcamView">
+
+                </div>
+                <br>
+                <br>
+                <button class = "btn btn-success" onclick = "CapImg()">Capture Image</button>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                <h2 class = "btn btn-info">Prediction</h2>
+                <br>
+                <br>
+                <span id = "emoji_name" class = "btn btn-success"></span>
+                <br>
+                <br>
+                <span id = "emoji_img" class = "btn btn-success"></span>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                <label class = "btn btn-primary">Snapshot View</label>
+                <br>
+                <div id = "SnapshotView">
+
+                </div>
+                <br>
+                <br>
+                <button class = "btn btn-success" onclick = "PredictEmotion()">Predict Gesture</button>
+            </div>
+        </center>
+        <script src = "main.js"></script>
+    </body>
+</html>
